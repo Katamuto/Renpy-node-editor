@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ren'Py Node Editor</title>
+<link rel="stylesheet" href="css/editor.css">
+<link rel="stylesheet" href="css/nodes.css">
+</head>
+<body>
+<div id="app">
+  <header id="toolbar"></header>
+  <aside id="palette"></aside>
+  <main id="canvas"></main>
+  <aside id="sidepanel"></aside>
+</div>
+
+<!-- Classic scripts (no ES modules) so this file also works when opened directly from disk.
+     Load order matters: core -> nodes -> io -> exporter -> editor -> main.
+     To add a node type: create js/nodes/<name>.js and add one line below. -->
+<script src="js/core/namespace.js"></script>
+<script src="js/core/events.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/registry.js"></script>
+<script src="js/core/flatten.js"></script>
+<script src="js/core/assets.js"></script>
+<script src="js/core/screens.js"></script>
+<script src="js/core/state.js"></script>
+<script src="js/core/history.js"></script>
+<script src="js/core/clipboard.js"></script>
+
+<script src="js/nodes/_common.js"></script>
+<script src="js/nodes/start.js"></script>
+<script src="js/nodes/end.js"></script>
+<script src="js/nodes/container.js"></script>
+<script src="js/nodes/ginput.js"></script>
+<script src="js/nodes/goutput.js"></script>
+<script src="js/nodes/label.js"></script>
+<script src="js/nodes/jump.js"></script>
+<script src="js/nodes/dialogue.js"></script>
+<script src="js/nodes/menu.js"></script>
+<script src="js/nodes/scene.js"></script>
+<script src="js/nodes/show.js"></script>
+<script src="js/nodes/hide.js"></script>
+<script src="js/nodes/pause.js"></script>
+<script src="js/nodes/screen.js"></script>
+<script src="js/nodes/audio.js"></script>
+<script src="js/nodes/condition.js"></script>
+<script src="js/nodes/variable.js"></script>
+<script src="js/nodes/python.js"></script>
+<script src="js/nodes/comment.js"></script>
+
+<script src="js/io/zip-writer.js"></script>
+<script src="js/io/zip-reader.js"></script>
+<script src="js/io/template-data.js"></script>
+<script src="js/io/project-format.js"></script>
+<script src="js/io/desktop.js"></script>
+
+
+<script src="js/i18n/extract.js"></script>
+<script src="js/i18n/po.js"></script>
+<script src="js/i18n/csv.js"></script>
+
+<script src="js/exporter/graph-analysis.js"></script>
+<script src="js/exporter/emit-script.js"></script>
+<script src="js/exporter/emit-options.js"></script>
+<script src="js/exporter/emit-screens.js"></script>
+<script src="js/exporter/emit-assets.js"></script>
+<script src="js/exporter/emit-fonts.js"></script>
+<script src="js/exporter/emit-translations.js"></script>
+<script src="js/exporter/build-zip.js"></script>
+
+<script src="js/editor/dom.js"></script>
+<script src="js/editor/list-editor.js"></script>
+<script src="js/editor/canvas.js"></script>
+<script src="js/editor/links.js"></script>
+<script src="js/editor/node-view.js"></script>
+<script src="js/editor/group-view.js"></script>
+<script src="js/editor/breadcrumb.js"></script>
+<script src="js/editor/node-drag.js"></script>
+<script src="js/editor/connect.js"></script>
+<script src="js/editor/panels.js"></script>
+<script src="js/editor/inspector.js"></script>
+<script src="js/editor/project-panel.js"></script>
+<script src="js/editor/assets-panel.js"></script>
+<script src="js/editor/screens-panel.js"></script>
+<script src="js/editor/translations-panel.js"></script>
+<script src="js/editor/play-panel.js"></script>
+<script src="js/editor/issues-panel.js"></script>
+<script src="js/editor/palette.js"></script>
+<script src="js/editor/context-menu.js"></script>
+<script src="js/editor/toolbar.js"></script>
+<script src="js/editor/shortcuts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

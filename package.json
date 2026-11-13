@@ -1,0 +1,17 @@
+{
+  "name": "renpy-node-editor",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Visual node editor that exports Ren'Py projects",
+  "scripts": {
+    "test": "node tools/test-all.js",
+    "build:web": "node scripts/build-web.js",
+    "icon": "tauri icon app-icon.png",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}
